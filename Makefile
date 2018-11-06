@@ -17,7 +17,7 @@ build: $(OBJS)
 	$(CXX) $(CPPFLAGS) $(INCS) $(OBJS) $(LIBS) -o bin/coordinate_matcher -static
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.cpp
-	$(CXX) $(CPPFLAGS) -I C:/Users/kevin/Documents/C++/C++project/lib/boost_1_68_0 $(INCS) $(CXXFLAGS) -c $< -o $@ 
+	$(CXX) $(CPPFLAGS) -I lib/boost_1_68_0 $(INCS) $(CXXFLAGS) -c $< -o $@ 
 
 .PHONY: clean
 
