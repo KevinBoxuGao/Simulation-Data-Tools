@@ -12,7 +12,7 @@ matcher::matcher(NodeFile &nodes, TempFile &temps) {
 }
 
 void matcher::match(std::string output_name) {
-    std::ofstream output("../outputs/"+output_name+".txt");
+    std::ofstream output("output/"+output_name+".txt");
     for(int x = 0; x < (nodes_num_of_lines-2); x++) {
         for(int i = 0; i < (temps_num_of_lines-9); i++) {
             if (temp_coordinates[0][i] - 0.001 < node_coordinates[0][x] && node_coordinates[0][x] < temp_coordinates[0][i] + 0.001) {

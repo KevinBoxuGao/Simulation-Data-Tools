@@ -26,7 +26,12 @@ double ** NodeFile::coordinates() {
         {
             coord[0][line_number] = convert_scientific_notation(nodeline.substr(27,21));
             coord[1][line_number] = convert_scientific_notation(nodeline.substr(48,21));
-            coord[2][line_number] = convert_scientific_notation(nodeline.substr(69,21));
+            try {
+                coord[2][line_number] = convert_scientific_notation(nodeline.substr(69,21));
+            } catch(std::out_of_range) {
+                coord[2][line_number] = 0;
+            }
+
         }
         file_object.close();
     }  
