@@ -15,11 +15,11 @@ std::string * file_finder::list_directory(const std::string path)
         std::string result2 = fs::basename(p);
         if (extension == ".txt") {
             files[0] = result;
-            files[2] = result2;
             continue;
         }
         else if (extension == ".csv") {
             files[1] = result;
+            files[2] = result2;
             continue;
         }
         else {
