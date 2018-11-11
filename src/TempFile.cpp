@@ -9,7 +9,7 @@ TempFile::TempFile(std::string file_name) {
 
 int * TempFile::indexes(std::string line) {
     int * indexes = new int[3];
-    int x, coord_count;
+    unsigned int x, coord_count;
     for(x = 0, coord_count = 0; x < line.length(); x++) {
         if (line[x] == ',')
         {
